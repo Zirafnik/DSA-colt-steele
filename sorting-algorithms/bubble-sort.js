@@ -23,3 +23,5 @@ function bubbleSort(arr) {
 
 console.log(bubbleSort([37, 45, 29, 8]));
 console.log(bubbleSort([23,4,52,1,3,5,23,5,224,3,1,42,45,24,32,254,53,23,1,3224,42,4,2,3433,13,24343,53,2,3,2]));
+
+//time complexity: O(n^2) or O(n) if nearly sorted arr and 'sorted' comes into play
