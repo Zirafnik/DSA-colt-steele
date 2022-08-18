@@ -1,8 +1,8 @@
 // Ex. 13
 // Recursion
 
-// Time:
-// Space:
+// Time: O(n)
+// Space: O(1)
 function recursiveRange(num) {
     if(num === 0) return 0;
 
