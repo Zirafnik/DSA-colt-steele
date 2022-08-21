@@ -1,4 +1,4 @@
-const findLongestSubstring = require('./Ex9_findLongestSubstring');
+const findLongestSubstring = require('../Ex9_findLongestSubstring');
 
 describe('Ex.9: Find longest substring', () => {
     test('empty', () => {

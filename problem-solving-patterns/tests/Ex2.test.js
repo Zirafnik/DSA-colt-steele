@@ -1,4 +1,4 @@
-const countUniqueValues = require('./Ex2_countUniqueValues');
+const countUniqueValues = require('../Ex2_countUniqueValues');
 
 describe('Ex.2: Count unique values', () => {
     // describe('countUniqueValues:', () => {

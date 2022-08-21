@@ -1,4 +1,4 @@
-const { areThereDuplicates1, areThereDuplicates2 } = require('./Ex4_areThereDuplicates');
+const { areThereDuplicates1, areThereDuplicates2 } = require('../Ex4_areThereDuplicates');
 
 describe('Ex.4: Are there duplicates', () => {
     describe('areThereDuplicates1', () => {

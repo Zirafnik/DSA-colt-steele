@@ -1,4 +1,4 @@
-const sameFrequency = require('./Ex3_sameFrequency');
+const sameFrequency = require('../Ex3_sameFrequency');
 
 describe('Ex.3: Same frequency', () => {
     test('same digits', () => {

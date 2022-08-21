@@ -1,4 +1,4 @@
-const maxSubarraySum = require('./Ex7_maxSubarraySum');
+const maxSubarraySum = require('../Ex7_maxSubarraySum');
 
 describe('Ex.7 Max subarray sum:', () => {
     test('equals 700', () => {

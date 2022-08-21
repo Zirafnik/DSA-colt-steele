@@ -1,4 +1,4 @@
-const minSubArrayLen = require('./Ex8_minSubArrayLen');
+const minSubArrayLen = require('../Ex8_minSubArrayLen');
 
 describe('Ex.8 Min sub-array length:', () => {
     test('2 -> because [4,3] is the smallest subarray', () => {

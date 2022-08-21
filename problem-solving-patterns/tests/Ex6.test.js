@@ -1,4 +1,4 @@
-const isSubsequence = require('./Ex6_isSubsequence');
+const isSubsequence = require('../Ex6_isSubsequence');
 
 describe('Ex.6 Is subequence:', () => {
     test('is subsequence', () => {

@@ -1,4 +1,4 @@
-const { validAnagram1, validAnagram2 } = require('./Ex1_validAnagram');
+const { validAnagram1, validAnagram2 } = require('../Ex1_validAnagram');
 
 describe('Ex.1: Valid anagram', () => {
     describe('validAnagram1:', () => {

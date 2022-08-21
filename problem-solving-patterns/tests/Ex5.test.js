@@ -1,4 +1,4 @@
-const averagePair = require('./Ex5_averagePair');
+const averagePair = require('../Ex5_averagePair');
 
 describe('Ex.5: Average pair', () => {
     test('contains pair', () => {
