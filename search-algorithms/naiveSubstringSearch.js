@@ -20,7 +20,7 @@ function naiveStringSearch(long, short) {
 
 // Time: O(n)
 // Space: O(1)
-// This doesn't work for repeating sub-patterns like 'ggg';
+// This doesn't work for repeating sub-patterns like 'ggg', because it skips the whole length of string that has already matched => KMP solves this issue with the table;
 function naiveStringSearch2(long, short) {
     let pointerLong = 0;
     let pointerShort = 0;
@@ -42,8 +42,12 @@ function naiveStringSearch2(long, short) {
         }
         pointerLong++;
     }
+
+    return counter;
 }
 
 
 console.log(naiveStringSearch('wowomgomgwowomg', 'omg')); //3
-console.log(naiveStringSearch('aaaaaaa', 'aaaaa')); //3
+console.log(naiveStringSearch('aaaaaaa', 'aaa')); //5
+console.log(naiveStringSearch2('wowomgomgwowomg', 'omg')); //3
+console.log(naiveStringSearch2('aaaaaaa', 'aaa')); //5
