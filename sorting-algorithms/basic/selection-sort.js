@@ -7,6 +7,7 @@ function swap(arr, idx1, idx2) {
 // Selection sort
 // Time: O(n^2)
 // Space: O(1)
+// more efficient in swapping (swaps only at the end if need be) -> if we have to minimize writing to disk or something
 function selectionSort(arr) {
     for(let i = 0; i < arr.length - 1; i++) {
         let minIdx = i;
