@@ -1,4 +1,28 @@
+function swap(arr, idx1, idx2) {
+    let temp = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp;
+}
+
+// Selection sort
+// Time: O(n^2)
+// Space: O(1)
 function selectionSort(arr) {
+    for(let i = 0; i < arr.length - 1; i++) {
+        let minIdx = i;
+        for(let j = i + 1; j < arr.length; j++) {
+            if(arr[minIdx] > arr[j]) {
+                minIdx = j;
+            }
+        }
+
+        if(minIdx !== i) swap(arr, i, minIdx);
+    }
+
+    return arr;
+}
+
+function selectionSortOld(arr) {
     let index = 0;
     let min = Infinity;
     let minIndex = 0;
@@ -23,35 +47,5 @@ function selectionSort(arr) {
     return arr;
 }
 
-function swap(arr, idx1, idx2) {
-    let temp = arr[idx1];
-    arr[idx1] = arr[idx2];
-    arr[idx2] = temp;
-}
-
 console.log(selectionSort([5, 3, 4, 1, 2]));
-
-//Time complexity: O(n^2);
-//Selection sort minimized number of swaps
-
-
-//Teacher solution
-/*
-function sselectionSort(arr){
-    for(var i = 0; i < arr.length; i++){
-        var lowest = i;
-        for(var j = i+1; j < arr.length; j++){
-            if(arr[j] < arr[lowest]){
-                lowest = j;
-            }
-        }
-        if(i !== lowest){
-            //SWAP!
-            var temp = arr[i];
-            arr[i] = arr[lowest];
-            arr[lowest] = temp;
-        }
-    }
-    return arr;
-}
-*/
+console.log(selectionSort([5, 4, 3, 2, 1]));
