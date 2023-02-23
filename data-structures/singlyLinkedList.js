@@ -54,10 +54,29 @@ class SinglyLinkedList {
 
 		return last;
 	}
+
+	shift() {
+		if (this.length === 0) return;
+
+		const removed = this.head;
+
+		this.head = this.head.next;
+		this.length -= 1;
+
+		// if we shifted the last node, turn the tail to null also
+		if (this.length === 0) {
+			this.tail = null;
+		}
+
+		// sever lingering bond before returning
+		removed.next = null;
+		return removed;
+	}
 }
 
 const list = new SinglyLinkedList();
-list.push(3).push(6).push(1);
+list.push(1).push(2).push(3);
 
 console.log(list.pop());
+console.log(list.shift());
 console.log(list);
