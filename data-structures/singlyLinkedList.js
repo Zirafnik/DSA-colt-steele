@@ -96,6 +96,16 @@ class SinglyLinkedList {
 
 		return currentNode;
 	}
+
+	set(value, idx) {
+		const desiredNode = this.get(idx);
+
+		if (!desiredNode) return false;
+
+		desiredNode.val = value;
+
+		return true;
+	}
 }
 
 const list = new SinglyLinkedList();
@@ -106,5 +116,7 @@ console.log(list.shift());
 
 list.unshift(0).unshift(-1);
 
+console.log(list.set(999, 1));
+console.log(list.set(111, 6));
 console.log(list.get(2));
 console.log(list);
