@@ -84,6 +84,18 @@ class SinglyLinkedList {
 
 		return this;
 	}
+
+	get(idx) {
+		if (idx >= this.length || idx < 0) return null;
+		if (idx === this.length - 1) return this.tail; // slight optimization, when we know its the tail
+
+		let currentNode = this.head;
+		for (let i = 0; i < idx; i++) {
+			currentNode = currentNode.next;
+		}
+
+		return currentNode;
+	}
 }
 
 const list = new SinglyLinkedList();
@@ -94,4 +106,5 @@ console.log(list.shift());
 
 list.unshift(0).unshift(-1);
 
+console.log(list.get(2));
 console.log(list);
