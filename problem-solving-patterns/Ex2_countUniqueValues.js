@@ -5,18 +5,18 @@
 // Space: O(1)
 
 function countUniqueValues(arr) {
-    let count = 0;
-    let prevNum;
+	let count = 0;
+	let prevNum;
 
-    for(let i = 0; i < arr.length; i++) {
-        // skip same numbers
-        if(arr[i] === prevNum) continue;
+	for (let i = 0; i < arr.length; i++) {
+		// skip same numbers
+		if (arr[i] === prevNum) continue;
 
-        prevNum = arr[i];
-        count++;
-    }
+		prevNum = arr[i];
+		count++;
+	}
 
-    return count;
+	return count;
 }
 
 module.exports = countUniqueValues;

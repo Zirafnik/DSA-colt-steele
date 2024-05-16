@@ -1,22 +1,22 @@
 function charCount(str) {
-    let result = {};
+	let result = {};
 
-    for(let i = 0; i < str.length; i++) {
-        let char = str[i].toLowerCase();
-        let regex = /[a-z0-9]/;  //unsure about regex performance
+	for (let i = 0; i < str.length; i++) {
+		let char = str[i].toLowerCase();
+		let regex = /[a-z0-9]/; //unsure about regex performance
 
-        if(!regex.test(char)) {
-            continue;
-        }
+		if (!regex.test(char)) {
+			continue;
+		}
 
-        if(result[char] > 0) {
-            result[char]++;
-        } else {
-            result[char] = 1;
-        }
-    }
+		if (result[char] > 0) {
+			result[char]++;
+		} else {
+			result[char] = 1;
+		}
+	}
 
-    return result;
+	return result;
 }
 
 console.log(charCount('How is it?'));

@@ -4,40 +4,38 @@
 // Time: O(n^2)
 // Space: O(n)
 function collectStrings(obj) {
-    let strings = [];
+	let strings = [];
 
-    for(const value of Object.values(obj)) {
-        if(typeof value !== 'string') {
-            strings = strings.concat(collectStrings(value));
-        } else {
-            strings.push(value);
-        }
-    }
+	for (const value of Object.values(obj)) {
+		if (typeof value !== 'string') {
+			strings = strings.concat(collectStrings(value));
+		} else {
+			strings.push(value);
+		}
+	}
 
-    return strings;
+	return strings;
 }
 
 const obj = {
-    stuff: "foo",
-    empty: {
-        burek: {
-            sirov: {
-
-            }
-        }
-    },
-    data: {
-        val: {
-            thing: {
-                info: "bar",
-                moreInfo: {
-                    evenMoreInfo: {
-                        weMadeIt: "baz"
-                    }
-                }
-            }
-        }
-    }
-}
+	stuff: 'foo',
+	empty: {
+		burek: {
+			sirov: {},
+		},
+	},
+	data: {
+		val: {
+			thing: {
+				info: 'bar',
+				moreInfo: {
+					evenMoreInfo: {
+						weMadeIt: 'baz',
+					},
+				},
+			},
+		},
+	},
+};
 
 console.log(collectStrings(obj)); // ["foo", "bar", "baz"])
