@@ -47,9 +47,11 @@ function validAnagram2(str1, str2) {
 	}
 
 	for (let char of str2) {
+		// if can't find letter (undefined), or value equal to zero
 		if (!freqCounters[char]) {
 			return false;
 		}
+
 		freqCounters[char]--;
 	}
 
