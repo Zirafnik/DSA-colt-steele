@@ -32,7 +32,7 @@ function areThereDuplicates2(...args) {
 	return false;
 }
 
-// One-liner solution using Set
+// One-liner solution using Set (no early return)
 function areThereDuplicates3(...arguments) {
 	return new Set(arguments).size !== arguments.length;
 }
